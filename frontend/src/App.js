@@ -6,29 +6,30 @@ import Search from './components/search';
 const UNSPLACH_KEY = process.env.REACT_APP_UNSPLACH_KEY;
 
 const App = () => {
-  const [word, setWord] = useState('')
+  const [word, setWord] = useState('');
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     console.log(word);
-    fetch( `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLACH_KEY}`)
-    .then((res) => res.json())
-    .then((data) =>{
-      console.log(data);
-    })
-    .catch((err) =>{
-      console.log(err)
-    } )
+    fetch(
+      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLACH_KEY}`,
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
-    setWord('')
-  }
-  
+    setWord('');
+  };
 
   return (
     <div>
-      <Header title='Images Gallery' />
+      <Header title="Images Gallery" />
       <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
     </div>
   );
-}
+};
 
 export default App;
