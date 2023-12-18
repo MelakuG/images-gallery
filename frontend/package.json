@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './src/**/*.{js,jsx}'",
-    "lint-fix": "eslint './src/**/*.{js,jsx}' --fix"
+    "lint": "eslint \"./src/**/*.{js,jsx}\"",
+    "lint-fix": "eslint \"./src/**/*.{js,jsx}\" --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -28,7 +28,7 @@
       "plugin:prettier/recommended"
     ]
   },
-  "prettier":{
+  "prettier": {
     "singleQuote": true
   },
   "browserslist": {
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.1.1"
