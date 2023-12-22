@@ -7,5 +7,19 @@
     ],
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
+    },
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.pycodestyleArgs": [
+        "--max-line-length=88"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": true
     }
 }
