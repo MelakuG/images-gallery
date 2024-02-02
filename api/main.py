@@ -1,3 +1,9 @@
+
+
+"""Basic Flask web server with an API endpoint to retrieve random images 
+using its own API from the unsplash API.
+"""
+
 import os
 import requests
 from flask import Flask, request
@@ -19,6 +25,8 @@ CORS(app)
 app.config["DEBUG"] = DEBUG
 @app.route("/new-image")
 def new_image():
+    """A new-image API endpoint that impliment a get request."""
+    
     word = request.args.get("query")
     headers = {
         "Accept-Version": "v1",
@@ -33,5 +41,3 @@ def new_image():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port="5050")
-
-    

@@ -10,9 +10,6 @@ python-dotenv = "*"
 flask-cors = "*"
 
 [dev-packages]
-black = "*"
-pylint = "*"
-pycodestyle = "*"
 
 [requires]
 python_version = "3.12"
