@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
@@ -125,7 +125,11 @@ const App = () => {
           </Container>
         </>
       )}
-      <ToastContainer position="bottom-right" />
+      <ToastContainer
+        position="bottom-right"
+        theme="colored"
+        transition={Slide}
+      />
     </div>
   );
 };
